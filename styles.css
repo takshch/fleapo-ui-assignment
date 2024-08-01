@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Montserrat:wght@400;700&display=swap');
+
+body {
+  background: #0F1320;
+  margin: 0;
+  font-family: "Gothic A1", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 120px;
+  background: #fff;
+  z-index: 1;
+  border-bottom-left-radius: 120px;
+}
+
+footer {
+  width: 100%;
+  height: 120px;
+  background: #fff;
+  z-index: 1;
+  border-top-right-radius: 120px;
+}
+
+.sections-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+#quater-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.quater {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 338px;
+}
+
+.quater__circle-with-label {
+  display: flex;
+  gap: 5px;
+}
+
+.quater__circle {
+  width: 62px;
+  height: 62px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.quater__dot-and-year {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.quater__dot {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.quater__year {
+  color: #fff;
+  font-weight: bold;
+}
+
+.quater__details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quater__line {
+  display: flex;
+  gap: 10px;
+}
+
+.quater__line-no {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.quater__line-text {
+  color: #fff;
+  font-size: 16px;
+}
+
+.quater--green .quater__circle,
+.quater--green .quater__dot {
+  background: #22A75D;
+}
+
+.quater--green .quater__line-no {
+  color: #22A75D;
+}
+
+.quater--green .quater__circle {
+  box-shadow: 0px 15px 25px 0px #22A75D40;
+}
+
+.quater--red .quater__circle,
+.quater--red .quater__dot {
+  background: #E20613;
+}
+
+.quater--red .quater__line-no {
+  color: #E20613;
+}
+
+.quater--red .quater__circle {
+  box-shadow: 0px 15px 25px 0px #E2061340;
+}
+
+.quater--yellow .quater__circle,
+.quater--yellow .quater__dot {
+  background: #FFD100;
+}
+
+.quater--yellow .quater__line-no {
+  color: #FFD100;
+}
+
+.quater--yellow .quater__circle {
+  box-shadow: 0px 15px 25px 0px #FFD10040;
+}
+
+.quater--blue .quater__circle,
+.quater--blue .quater__dot {
+  background: #2278D4;
+}
+
+.quater--blue .quater__line-no {
+  color: #2278D4;
+}
+
+
+.quater--blue .quater__circle {
+  box-shadow: 0px 15px 25px 0px #2278D440;
+}
+
+
+.about-section {
+  display: flex;
+  gap: 20px;
+  margin-top: 180px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #fff;
+}
+
+.about__heading {
+  display: flex;
+  gap: 10px;
+  font-weight: bold;
+  align-items: center;
+  font-size: 38px;
+}
+
+.about__details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.about__paragraph {}
+
+.about__paragraph--bold {
+  font-weight: bold;
+}
+
+.about-logo {
+  position: relative;
+}
+
+.about-logo__img {
+  width: 891px;
+  height: 928px;
+}
+
+.about-logo__gradient {
+  position: absolute;
+  top: 28px;
+  right: 0;
+
+  width: 791px;
+  height: 900px;
+  background: linear-gradient(180deg, #ADBFFF 0%, #0039FF 100%);
+  z-index: -1;
+  border-radius: 12px;
+}
+
+.btn-readmore {
+  width: 120px;
+  padding: 10px;
+  background: transparent;
+  border: 2px solid #22A75D;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+/** Styles for responsives */
+
+@media (max-width: 768px) {
+
+  header,
+  footer {
+    display: none;
+  }
+
+  .sections-wrapper {
+    padding: 0;
+  }
+
+  #quater-section {
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .quater {
+    width: auto;
+    margin-top: 40px;
+  }
+
+  .about-section {
+    margin-top: 100px;
+  }
+
+  .about {
+    display: none;
+  }
+
+  .about-logo {
+    background: #0039FF;
+    width: 100%;
+    height: 348.91px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    overflow: hidden;
+  }
+
+  .about-logo__img {
+    position: absolute;
+    bottom: -10px;
+    right: -25%;
+    transform: translateX(-25%);
+    width: 320.31px;
+    height: 348.91px;
+  }
+
+  .about-logo__gradient {
+    display: none;
+  }
+}
